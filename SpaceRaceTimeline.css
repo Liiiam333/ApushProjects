@@ -1,6 +1,6 @@
 body{
-    background-color:white;
-    
+    background-color:black;
+    overflow-y: hidden;
     scrollbar-width: none;
 }
 .container{
@@ -54,7 +54,7 @@ body{
 /*first section*/
 .one{
     width: 60vw;
-    background-color: blue;
+    background-color: grey;
 }
 .one .top{
     font-size: 50px;
@@ -63,7 +63,7 @@ body{
 /*second section*/
 .two{
     width: 553vw;
-    background-image: url(Your\ paragraph\ text.png);
+    background-image: url(SpaceRaceTimeline.png);
     background-color: blue;
     position: relative;
 }
@@ -82,7 +82,7 @@ body{
     text-align: center;
 }
 li{
-    border-style: ridge;
+    border-style: ridg
 }
 
 /*Main Page*/
