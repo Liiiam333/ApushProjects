@@ -80,7 +80,7 @@
             padding: 24px;
             min-width: 450px;
             max-width: 550px;
-            max-height: 550px;
+            height: 550px;
             flex: 1 1 340px;
             margin-bottom: 24px;
             overflow: hidden;
@@ -91,7 +91,6 @@
             margin-top: 0;
             font-size: 1.3rem;
             color: var(--primary);
-            font-family: times;
         }
         .upgradeCard {
             background: var(--card);
@@ -126,22 +125,23 @@
             color: #fff;
             border: none;
             border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 1rem;
+            padding: 10px 15px;
+            font-size: .95rem;
             cursor: pointer;
             margin-top: 12px;
             transition: background 0.2s;
         }
-        .resetBTN {
-            background: yellow;
+        .AboutBtn {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: #fff;
             border: none;
             border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 1rem;
+            padding: 9px 15px;
+            font-size: .95rem;
             cursor: pointer;
             margin-top: 12px;
             transition: background 0.2s;
+            position: relative; top: 20px;
         }
         .btn:disabled {
             background: #ccc;
@@ -194,7 +194,7 @@
             border-radius: 8px;
             border: 1px solid #e0e0e0;
             padding: 12px;
-            height: 120px;
+            height: 160px;
             overflow-y: auto;
             font-size: 0.98rem;
             margin-top: 12px;
@@ -448,7 +448,7 @@
             {
                 id: 'GraCap',
                 name: 'Grasso Capola',
-                desc: 'Italian. Will likely become the next big Captain of Industry to better to hire now than later.  Boosts all employee revenue by $30/sec.',
+                desc: 'Italian. Will likely become the next big Captain of Industry so better to hire now than later.  Boosts all employee revenue by $30/sec.',
                 baseCost: 300,
                 costMult: 2,
                 effect: (g) => { g.employeeBoost = (g.employeeBoost || 1) * 1.9; },
@@ -896,11 +896,12 @@
         // --- (Extra) Reset Game ---
         // Uncomment below to add a reset button for debugging
         const resetBtn = document.createElement('button');
-        resetBtn.document.getElementByClass('stats')
-        resetBtn.appendChild()
         resetBtn.textContent = 'Reset Game';
-        resetBtn.className = 'resetBTN';
+        resetBtn.className = 'btn';
         resetBtn.style.bottom = '20px';
+        const parentElement = document.getElementById('stats-card')
+        const lastElement = document.getElementById('log')
+        parentElement.insertBefore(resetBtn, lastElement)
         resetBtn.onclick = function() {
            
             game.cash = 0;
@@ -923,7 +924,13 @@
             checkAchievements();;
             location.reload();
         };
-        document.body.appendChild(resetBtn);
+
+        const aboutBtn = document.createElement('a')
+        aboutBtn.textContent = 'About';
+        aboutBtn.href = 'http://127.0.0.1:3000/IdleGildedTycoonAboutPage';
+        aboutBtn.className = 'AboutBtn';
+        aboutBtn.style.bottom = '20px';
+        parentElement.appendChild(aboutBtn)
 
     </script>
 </body>
