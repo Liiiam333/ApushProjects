@@ -1,7 +1,10 @@
-body{
+.body{
     background-color:black;
     overflow-y: hidden;
     scrollbar-width: none;
+}
+.mainPageBody{
+    overflow: scroll;
 }
 .container{
     width: 100vw;
