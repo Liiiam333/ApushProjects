@@ -1,2 +1,1 @@
-# EugeneVDebsInfographic
-https://liiiam333.github.io/ApushProjects/SpaceRaceTimeline.html
+[Click Me For Game!](https://logancampisi.github.io/ApushProjectThree_IdleGildedTycoon/Game.html)
