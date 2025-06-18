@@ -1,11 +1,7 @@
-.body{
+body{
     background-color:black;
     overflow-y: hidden;
     scrollbar-width: none;
-}
-.mainPageBody{
-    background-color: blue;
-    overflow: scroll;
 }
 .container{
     width: 100vw;
